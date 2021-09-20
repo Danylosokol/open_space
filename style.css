@@ -37,3 +37,7 @@ body{
     z-index: 1;
     transform: rotate(25deg);
 }
+
+.control-panel{
+    background-color: #000;
+}
