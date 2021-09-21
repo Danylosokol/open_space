@@ -39,5 +39,34 @@ body{
 }
 
 .control-panel{
-    background-color: #000;
+    background-color: #252424;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    display: flex;
+    width: 20vw;
+    height: 40vh;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+}
+
+.levers, .check-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type=button][value=OK]{
+    margin-left: 1vw;
+}
+
+input[type=range]{
+    transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    margin: 50px 0;
+    width: 60px;
 }
