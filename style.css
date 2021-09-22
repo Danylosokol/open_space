@@ -39,15 +39,27 @@ body{
 }
 
 .control-panel{
-    background-color: #252424;
     position: absolute;
     right: 10px;
     bottom: 10px;
+    width: 22vw;
+    height: 22vw;
+    min-width: 300px;
+    min-height: 290px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-panel-inner{
+    background-color: #252424;
     width: 20vw;
     height: 40vh;
     min-width: 272px;
     min-height: 240px;
 }
+
 
 .levers, .check-buttons{
     display: flex;
