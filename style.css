@@ -41,27 +41,31 @@ body{
 .control-panel{
     background-color: #252424;
     position: absolute;
-    right: 5px;
-    top: 10px;
-    display: flex;
+    right: 10px;
+    bottom: 10px;
     width: 20vw;
     height: 40vh;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-}
-
-.controls{
-    display: flex;
-    justify-content: center;
+    min-width: 272px;
+    min-height: 240px;
 }
 
 .levers, .check-buttons{
     display: flex;
     justify-content: space-around;
+    margin: 2vh 0;
 }
 
-input[type=button][value=OK]{
-    margin-left: 1vw;
+input[type=password]{
+    margin-left: 4vw;
+}
+
+input[type=button][value=OK] {
+    margin: 2vh 3vw 2vh auto;
+}
+
+input[type=button][value=Launch]{
+    display: block;
+    margin: 2vh auto;
 }
 
 input[type=range]{
@@ -69,4 +73,6 @@ input[type=range]{
     -moz-transform: rotate(270deg);
     margin: 50px 0;
     width: 60px;
+    flex-grow: initial;
+    flex-basis: 60px;
 }
