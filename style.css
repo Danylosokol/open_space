@@ -5,60 +5,60 @@
 
 body{
     background-color: #000;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
 }
 
 .space{
+    background-image: url(images/space.png);
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
     position: relative;
     width: 75vw;
-    height: 100vh;
-    background-image: url(images/space.png);
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
 }
 
 .planet{
-    position: absolute;
-    height: 50%;
-    width: auto;
-    left: -5px;
     bottom: -5px;
+    height: 50%;
+    left: -5px;
+    position: absolute;
+    width: auto;
     z-index: 2;
 }
 
 .rocket{
-    position: absolute;
-    height: 25%;
-    width: auto;
-    left: 160px;
     bottom: 150px;
-    z-index: 1;
+    height: 25%;
+    left: 160px;
+    position: absolute;
     transform: rotate(25deg);
+    width: auto;
+    z-index: 1;
 }
 
 .control-panel{
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 21vw;
-    height: 42vh;
-    min-width: 282px;
-    min-height: 250px;
+    align-items: center;
     background-image: repeating-linear-gradient(45deg, yellow, yellow 15px, black 15px, black 30px);
+    bottom: 10px;
     box-shadow: 2px -2px 5px grey;
     display: flex;
+    height: 42vh;
     justify-content: center;
-    align-items: center;
+    min-height: 250px;
+    min-width: 282px;
+    position: absolute;
+    right: 10px;
+    width: 21vw;
 }
 
 .control-panel__inner{
     background-color: #252424;
-    width: 20vw;
     height: 40vh;
-    min-width: 272px;
     min-height: 240px;
+    min-width: 272px;
+    width: 20vw;
 }
 
 
@@ -69,30 +69,30 @@ body{
 }
 
 input[type=password]{
-    margin-left: 4vw;
-    border: 2px solid yellow;
     background-color: #252424;
-    color: darkgrey;
+    border: 2px solid yellow;
     border-radius: 15px;
+    color: darkgrey;
     height: 1.5em;
+    margin-left: 4vw;
 }
 
 input[type=password]:focus{
-    outline: none;
-    border: 2px solid #252424;
     background: yellow;
+    border: 2px solid #252424;
     color: #252424;
+    outline: none;
 }
 
 input[type=button][value=OK] {
-    margin: 2vh 3vw 2vh auto;
     background-color: yellow;
-    height: 1.5em;
+    border-radius: 15px;
+    border-width: 0;
     color: #252424;
     font-weight: bold;
-    border-width: 0;
+    height: 1.5em;
+    margin: 2vh 3vw 2vh auto;
     width: 2em;
-    border-radius: 15px;
 }
 
 input[type=button][value=OK]:hover{
@@ -105,17 +105,17 @@ input[type=button][value=OK]:active{
 }
 
 input[type=button][value=Launch]{
-    display: block;
-    margin:  auto;
-    width: 40px;
-    height: 40px;
-    border-width: 0;
     background-image: url('/images/start_button.png');
-    background-size: 155%;
     background-position: 50% 45%;
-    color: rgba(0, 0, 0, 0);
+    background-size: 155%;
     border-radius: 25px;
+    border-width: 0;
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    height: 40px;
+    margin:  auto;
     opacity: 80%;
+    width: 40px;
 }
 
 input[type=button][value=Launch]:hover{
@@ -123,11 +123,11 @@ input[type=button][value=Launch]:hover{
 }
 
 input[type=range]{
+    flex-basis: 60px;
+    flex-grow: initial;
+    margin: 50px 0;
     transform: rotate(270deg);
     -moz-transform: rotate(270deg);
-    margin: 50px 0;
     width: 60px;
-    flex-grow: initial;
-    flex-basis: 60px;
 }
 
