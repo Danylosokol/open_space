@@ -114,12 +114,16 @@ input[type=button][value=Launch]{
     display: block;
     height: 40px;
     margin:  auto;
-    opacity: 80%;
+    opacity: 90%;
     width: 40px;
 }
 
 input[type=button][value=Launch]:hover{
     opacity: 100%;
+}
+
+input[type=button][value=Launch]:active{
+    opacity: 70%;
 }
 
 input[type=range]{
