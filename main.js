@@ -73,11 +73,31 @@ document.addEventListener('DOMContentLoaded', function(){
         if(checkboxesOn === true && rangesOn === true) {
             let launchButton = document.getElementById("launch-button");
             launchButton.disabled = false;
-            launchRocket();
+            launchButton.addEventListener("click", function(){
+                launchRocket();
+            });
         }
     }
 
+    let id = null;
     function launchRocket(){
+        let rocket = document.querySelector(".rocket");
+        let positionLeft = 159;
+        let positionBottom = 149;
+        clearInterval(id);
+        id = setInterval(trajectory, 10);
+        function trajectory(){
+            if(positionLeft === 1440){
+                clearInterval(id);
+                console.log("launched");
+            }
+            else{
+                positionLeft++;
+                positionBottom++;
+                rocket.style.bottom = positionBottom + 'px';
+                rocket.style.left = positionLeft + 1 + 'px';
+            }
+        }
         return 0;
     }
 });
