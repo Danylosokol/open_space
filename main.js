@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
-    let password = "1";
+    let password = "TrustNo1";
     let state = true;
     let okButton = document.getElementById("ok-button");
     let checkboxes = document.querySelectorAll("input[type=checkbox]");
     let ranges = document.querySelectorAll("input[type=range]");
+    let launchButton = document.getElementById("launch-button");
     let checkboxesOn = false;
     let rangesOn = false;
     stateOfPanel();
@@ -24,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function(){
             if(checkboxesOn === true){
                 stateOfLaunchButton();
             }
+            else if(launchButton.disabled === false){
+                launchButton.disabled = true;
+            }
         })
     }
 
@@ -33,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function(){
             if(rangesOn === true){
                 stateOfLaunchButton();
             }
+            else if(launchButton.disabled === false){
+                launchButton.disabled = true;
+            }
         }
     }
 
@@ -40,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function(){
         let passwordInput = document.querySelector("input[type=password]");
         passwordInput.disabled = !state;
         okButton.disabled = !state;
-        let launchButton = document.getElementById("launch-button");
         launchButton.disabled = true;
         for (let i = 0; i < checkboxes.length; i++) {
             checkboxes[i].disabled = state;
@@ -69,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     function stateOfLaunchButton(){
-        console.log("we in");
         if(checkboxesOn === true && rangesOn === true) {
             let launchButton = document.getElementById("launch-button");
             launchButton.disabled = false;
@@ -89,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function(){
         function trajectory(){
             if(positionLeft === 1440){
                 clearInterval(id);
-                console.log("launched");
             }
             else{
                 positionLeft++;
